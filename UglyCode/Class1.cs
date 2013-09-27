@@ -1,4 +1,6 @@
-﻿using UglyCode.Extensions;
+﻿using System.Data.SqlClient;
+
+using UglyCode.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +15,11 @@ namespace UglyCode
         public int TimeStamp;
 
         private string _name = "";
+        private SqlConnection _connection;
 
         public Class1()
         {
-            
+            _connection = new SqlConnection();
         }
 
         public string Name
@@ -74,6 +77,12 @@ namespace UglyCode
 
         public override string ToString() {
             return base.ToString() + _name;
+        }
+    }
+
+    public sealed class Superclass : Class1
+    {
+        public Superclass() : base() {
         }
     }
 }
