@@ -12,10 +12,14 @@ namespace UglyCode
 {
     public abstract class Class1
     {
+        #region Fields
         public int TimeStamp;
 
         private string _name = "";
+        #region Database
         private SqlConnection _connection;
+        #endregion
+        #endregion
 
         public Class1()
         {
