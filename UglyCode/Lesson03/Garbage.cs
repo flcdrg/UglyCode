@@ -15,6 +15,11 @@ namespace UglyCode.Lesson03
         public Garbage()
         {
             _timer = new Timer() { Interval = 500, Enabled = false };
+            _timer.Elapsed += TimerOnElapsed;
+        }
+
+        private void TimerOnElapsed( object sender, ElapsedEventArgs elapsedEventArgs )
+        {
         }
 
         public SqlConnection ConnectionFactory()
@@ -24,6 +29,8 @@ namespace UglyCode.Lesson03
 
         public void Main()
         {
+            var connection = ConnectionFactory();
+
             var pen = new Pen( Brushes.Azure );
 
             var brush = Brushes.Black;
