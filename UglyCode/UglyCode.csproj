@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8811EB8F-6F91-4048-9A88-8918A224E43D}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UglyCode</RootNamespace>
     <AssemblyName>UglyCode</AssemblyName>
@@ -32,6 +32,9 @@
     <CodeAnalysisRuleSet>..\FxCop.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>UglyCode.Lesson02.Dates</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NSubstitute">
       <HintPath>..\packages\NSubstitute.1.6.1.0\lib\NET40\NSubstitute.dll</HintPath>
@@ -50,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Lesson01\Class1.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Lesson02\Dates.cs" />
     <Compile Include="Lesson02\ServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
