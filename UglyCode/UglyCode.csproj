@@ -35,7 +35,7 @@
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>UglyCode.Lesson02.Dates</StartupObject>
+    <StartupObject>UglyCode.Lesson04.Operators</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NSubstitute">
@@ -59,6 +59,7 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Lesson02\Dates.cs" />
     <Compile Include="Lesson02\ServiceTests.cs" />
+    <Compile Include="Lesson04\Operators.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
