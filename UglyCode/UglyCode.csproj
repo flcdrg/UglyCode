@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Lesson05\Variables.ps1" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
