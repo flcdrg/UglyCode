@@ -60,6 +60,7 @@
     <Compile Include="Lesson02\Dates.cs" />
     <Compile Include="Lesson02\ServiceTests.cs" />
     <Compile Include="Lesson04\Operators.cs" />
+    <Compile Include="Lesson05\Solid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
