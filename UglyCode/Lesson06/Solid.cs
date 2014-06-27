@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
-namespace UglyCode.Lesson05
+namespace UglyCode.Lesson06
 {
     interface ISolid
     {
