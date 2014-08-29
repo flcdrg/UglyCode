@@ -2,7 +2,7 @@
 
 namespace UglyCode.Lesson06
 {
-    interface ISolid
+    public interface ISolid
     {
         float Multiply(int x, int y);
         void Log(string message);
@@ -11,7 +11,7 @@ namespace UglyCode.Lesson06
         string Format(string message, params object[] args);
     }
 
-    class Solid : ISolid
+    public class Solid : ISolid
     {
         public int TaxRate { get; set; }
 
@@ -37,7 +37,7 @@ namespace UglyCode.Lesson06
         public string Format(string message, params object[] args) { return string.Format(message, args); }
     }
 
-    class Liquid : ISolid
+    public class Liquid : ISolid
     {
         public float Multiply(int x, int y)
         {
