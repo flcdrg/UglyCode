@@ -35,7 +35,7 @@
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>UglyCode.Lesson04.OperatorsDebugging</StartupObject>
+    <StartupObject>UglyCode.Lesson07.Tasks</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NSubstitute">
@@ -62,6 +62,7 @@
     <Compile Include="Lesson04\Operators.cs" />
     <Compile Include="Lesson06\Solid.cs" />
     <Compile Include="Lesson04\OperatorsDebugging.cs" />
+    <Compile Include="Lesson07\Tasks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
