@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace UglyCode.Lesson07
@@ -7,55 +8,74 @@ namespace UglyCode.Lesson07
     {
         public static void Main()
         {
-            Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
 
             One();
-
             Two();
-
             Three();
-
             Four();
-
             Five();
-
             Six();
+            Seven();
+            Eight();
 
             Console.ReadLine();
         }
 
         private static void One()
         {
-            var t = new Task(() => Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId));
+            var t = new Task(() => Console.WriteLine(Thread.CurrentThread.ManagedThreadId));
         }
 
         private static void Two()
         {
-            var t = new Task(() => Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId));
+            var t = new Task(() => Console.WriteLine(Thread.CurrentThread.ManagedThreadId));
 
             t.Start(TaskScheduler.Current);
         }
 
         private static void Three()
         {
-            var t = new Task(() => Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId));
+            var t = new Task(() => Console.WriteLine(Thread.CurrentThread.ManagedThreadId));
 
             t.RunSynchronously();
         }
 
         private static void Four()
         {
-            Task.Run(() => Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId));
+            Task.Run(() => Console.WriteLine(Thread.CurrentThread.ManagedThreadId));
         }
 
         private static void Five()
         {
-            Task.Factory.StartNew(() => Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId));
+            Task.Factory.StartNew(() => Console.WriteLine(Thread.CurrentThread.ManagedThreadId));
         }
 
         private static void Six()
         {
-            Task.Factory.StartNew(() => Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId));
+            Task.Factory.StartNew(() => Console.WriteLine(Thread.CurrentThread.ManagedThreadId));
+        }
+
+        private static void Seven()
+        {
+            Console.WriteLine("Before");
+            Task.Factory.StartNew(() =>
+            {
+                Thread.Sleep(20);
+                Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+            });
+            Console.WriteLine("After");
+        }
+
+        private static async void Eight()
+        {
+            Console.WriteLine("Before");
+            await Task.Factory.StartNew(() =>
+            {
+                Thread.Sleep(20);
+                Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+            });
+            Console.WriteLine("After");
         }
     }
 }
